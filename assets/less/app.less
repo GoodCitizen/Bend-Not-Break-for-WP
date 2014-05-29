@@ -1,0 +1,266 @@
+/* Table of Contents
+=====================================================
+  BOOTSTRAP...........Import Bootstrap styles
+  SITEWIDE STYLES.....Global styles
+  PAGE STYLES.........Styles on a per page/section basis
+  FONT-FACE...........Import brand font files
+  BROWSER DEBUGGING...Making crappy browsers behave
+*/
+
+@body-bg:               #000;
+@text-color:            @gray-dark;
+@link-color:            @brand-primary;
+@link-hover-color:      darken(@link-color, 15%);
+
+@icon-font-path: "../fonts/";
+
+@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font-family-serif: "DidotHeadlineDemi", Georgia, "Times New Roman", Times, serif;
+
+@font-family-serif-alt: Georgia, "Times New Roman", Times, serif;
+
+@container-lg-desktop: @container-desktop;
+
+/* --------------------------------------------------
+
+  BOOTSTRAP
+
+-------------------------------------------------- */
+@import '_bootstrap';
+
+
+
+
+
+/* --------------------------------------------------
+
+  SITEWIDE STYLES
+
+-------------------------------------------------- */
+
+/* Brand Colors
+================================================== */
+@brand-red:       #ED2024;
+
+/* Global Styles
+================================================== */
+a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #000;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.wrapper-video {
+  padding-top: 25px;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 75%; /* 4:3 */
+  position: relative;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.content blockquote {
+  margin: 0 auto 50px;
+  padding: 10px 0;
+  text-align: center;
+  border: none;
+  p {
+    font: bold 14px @font-family-serif-alt;
+    line-height: 1.5;
+  }
+  .last{
+    font-family: @font-family-serif;
+    font-style: italic;
+    color: @brand-red;
+    strong {
+      font-style: normal;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.title {
+  font-family: @font-family-serif;
+  &.title-primary {
+    font-size: 60px;
+    letter-spacing: .05em;
+    text-align: center;
+  }
+  &.title-page {
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    color: @brand-red;
+  }
+}
+
+img.pull-right,
+img.pull-left { margin-bottom: 10px; }
+img.pull-right { margin-left: 20px; }
+img.pull-left { margin-right: 20px; }
+
+/* Primary Layout
+================================================== */
+.home{
+  .page-header{
+    display: none;
+  }
+}
+.content {
+  margin-top: 65px;
+  margin-bottom: 65px;
+  background: #000; /* just in case content-sidebar is shorter than content-main, background will stay black */
+}
+
+.bordered-wrapper {
+  position: relative;
+  border: 7px solid @brand-red;
+  .corner {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    background: url(../img/bg-corner.png) no-repeat;
+    z-index: 10;
+    &.corner-tl {
+      top: -7px;
+      left: -7px;
+    }
+    &.corner-tr {
+      top: -7px;
+      right: -7px;
+      .rotate(90deg);
+    }
+    &.corner-br {
+      bottom: -7px;
+      right: -7px;
+      .rotate(180deg);
+    }
+    &.corner-bl {
+      bottom: -7px;
+      left: -7px;
+      .rotate(270deg);
+    }
+  }
+}
+
+.content-sidebar {
+  padding: 40px 30px;
+  color: #fff;
+  background: #000;
+  a {
+    font-weight: normal;
+    text-decoration: none;
+    color: #fff;
+  }
+  .book-burst {
+    margin: 0 auto 20px;
+    width: 60%;
+    display: block;
+  }
+  .nav {
+    margin-bottom: 25px;
+    font-family: @font-family-serif;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    li {
+      padding: 5px 0;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+  }
+  .nav-title {
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    color: @brand-red;
+  }
+}
+
+.content-main {
+  padding: 50px;
+  background: #fff url(/assets/img/bg-content-main.jpg) no-repeat;
+}
+
+
+
+
+
+/* --------------------------------------------------
+
+  PAGE STYLES
+
+-------------------------------------------------- */
+
+/* Home
+================================================== */
+.page-index {
+  .book-burst {
+    display: none;
+  }
+  .content-main {
+    background: #fff;
+  }
+}
+
+.book-cover-home {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Reviews
+================================================== */
+.review {
+  font-size: 14px;
+  a {
+    font-size: 13px;
+  }
+  footer {
+    font-size: 100%;
+    font-family: @font-family-serif-alt;
+    cite {
+      font-style: italic;
+    }
+  }
+}
+
+
+
+/* --------------------------------------------------
+
+  FONT-FACE
+
+-------------------------------------------------- */
+
+/* @license
+ * MyFonts Webfont Build ID 2369118, 2012-09-20T14:31:22-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Didot Headline Demi by Canada Type
+ * URL: http://www.myfonts.com/fonts/canadatype/didot-headline/demi/
+ * Copyright: Copyright &#x00A9; 2009 Bill Troop. Published by Canada Type. All rights reserved.
+ * Licensed pageviews: 10,000
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2369118
+ *
+ * © 2012 Bitstream Inc
+*/
+
+ @font-face {font-family: 'DidotHeadlineDemi';src: url('../fonts/didot-headline-demi/24265E_0_0.eot');src: url('../fonts/didot-headline-demi/24265E_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/didot-headline-demi/24265E_0_0.woff') format('woff'),url('../fonts/didot-headline-demi/24265E_0_0.ttf') format('truetype');}
