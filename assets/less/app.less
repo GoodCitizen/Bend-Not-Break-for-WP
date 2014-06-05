@@ -89,29 +89,53 @@ a {
   }
 }
 
+.nav {
+  font-family: @font-family-serif;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    padding: 5px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+}
+
+.nav-title {
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  color: @brand-red;
+}
+
+.nav-list {
+
+}
+
 .title {
   font-family: @font-family-serif;
+  a{
+    text-decoration: none;
+  }
   &.title-primary {
-    font-size: 60px;
+    font-size: 34px;
     letter-spacing: .05em;
     text-align: center;
-    a{
-      text-decoration: none;
-      &:hover{
-        color: @text-color;
-      }
-      &:active{
-        color: @text-color;
-      }
-      &:focus{
-        color: @text-color;
-      }
+    @media (min-width: @screen-sm-min) {
+      font-size: 60px;
     }
   }
   &.title-page {
-    font-size: 28px;
+    font-size: 24;
     letter-spacing: 0.1em;
+    text-align: center;
     color: @brand-red;
+    @media (min-width: @screen-sm-min) {
+      font-size: 28px;
+      text-align: left;
+    }
   }
 }
 
@@ -213,6 +237,52 @@ img.pull-left { margin-right: 20px; }
   background: #fff url(../img/bg-content-main.jpg) no-repeat;
 }
 
+.mobile-nav {
+  margin-top: 15px;
+  margin-bottom: 3px;
+  .nav-toggle {
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 15px 0;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: @brand-red;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .nav-wrapper {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .nav-title {
+    position: relative; // for positioning the :after psuedo element
+    font-size: 20px;
+    cursor: pointer;
+    &:after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: -20%;
+      font-family: @font-family-sans-serif;
+    }
+  }
+  .nav-list {
+    display: none;
+    a {
+      font-size: 12px;
+      color: #fff;
+      text-decoration: none;
+    }
+    &.active {
+      display: block;
+    }
+  }
+}
 
 
 

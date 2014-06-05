@@ -1,3 +1,4 @@
+<!--
 <header id="header" class="banner navbar navbar-default navbar-fixed-top visible-xs" role="banner">
   <div class="container">
     <nav class="" role="navigation">
@@ -9,3 +10,4 @@
     </nav>
   </div>
 </header>
+-->
