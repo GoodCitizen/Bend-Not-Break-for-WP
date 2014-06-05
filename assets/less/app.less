@@ -69,7 +69,7 @@ a {
   }
 }
 
-.content blockquote {
+.page-quote {
   margin: 0 auto 50px;
   padding: 10px 0;
   text-align: center;
@@ -78,7 +78,7 @@ a {
     font: bold 14px @font-family-serif-alt;
     line-height: 1.5;
   }
-  .last{
+  footer {
     font-family: @font-family-serif;
     font-style: italic;
     color: @brand-red;
@@ -95,6 +95,18 @@ a {
     font-size: 60px;
     letter-spacing: .05em;
     text-align: center;
+    a{
+      text-decoration: none;
+      &:hover{
+        color: @text-color;
+      }
+      &:active{
+        color: @text-color;
+      }
+      &:focus{
+        color: @text-color;
+      }
+    }
   }
   &.title-page {
     font-size: 28px;
@@ -187,10 +199,18 @@ img.pull-left { margin-right: 20px; }
     color: @brand-red;
   }
 }
+.nav>li{
+  display: inline-block;
+  &>{
+    a{
+      text-decoration: none;
+    }
+  }
+}
 
 .content-main {
   padding: 50px;
-  background: #fff url(/assets/img/bg-content-main.jpg) no-repeat;
+  background: #fff url(../img/bg-content-main.jpg) no-repeat;
 }
 
 
@@ -235,8 +255,23 @@ img.pull-left { margin-right: 20px; }
   }
 }
 
+/* --------------------------------------------------
 
+  JS Plugins
 
+-------------------------------------------------- */
+.transition{
+  -webkit-transition: top 0.9s ease;
+  -moz-transition: top 0.9s ease;
+  -o-transition: top 0.9s ease;
+  transition: top 0.9s ease;
+}
+.down{
+  top: -50px;
+}
+.up{
+  top: 0;
+}
 /* --------------------------------------------------
 
   FONT-FACE

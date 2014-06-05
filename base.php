@@ -6,6 +6,8 @@
       <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'roots'); ?>
     </div>
   <![endif]-->
+
+  <?php get_template_part('templates/header-top-navbar'); ?>
   <div class="container">
     <div class="row">
       <div class="content bordered-wrapper col-sm-12 col-md-10 col-md-offset-1">
@@ -47,7 +49,7 @@
           </aside> <!-- /.content-sidebar col-sm-3 -->
           <main class="content-main col-xs-12 col-sm-9" role="main">
             <?php include roots_template_path(); ?>
-          </main><
+          </main>
 
           </div> <!-- /.row -->
           <div class="corner corner-tl"></div> <!-- /.corner corner-tl -->
