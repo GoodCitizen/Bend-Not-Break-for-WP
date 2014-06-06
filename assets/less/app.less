@@ -118,6 +118,15 @@ a {
   font-family: @font-family-serif;
   a{
     text-decoration: none;
+    &:hover{
+      color: #000;
+    }
+    &:focus{
+      color: #000;
+    }
+    &:active{
+      color: #000;
+    }
   }
   &.title-primary {
     font-size: 34px;
@@ -137,6 +146,14 @@ a {
       text-align: left;
     }
   }
+  &.title-reviews{
+    font-size: 18px;
+    color: @brand-red;
+    @media (min-width: @screen-sm-min) {
+      font-size: 22px;
+      text-align: left;
+    }
+  }
 }
 
 img.pull-right,
@@ -147,8 +164,16 @@ img.pull-left { margin-right: 20px; }
 /* Primary Layout
 ================================================== */
 .home{
-  .page-header{
+  .title-page{
     display: none;
+  }
+  .content-sidebar{
+    .book-burst {
+      display: none;
+    }
+  }
+  .content-main {
+    background: #fff;
   }
 }
 .content {
@@ -342,6 +367,35 @@ img.pull-left { margin-right: 20px; }
 .up{
   top: 0;
 }
+
+/* Reviews
+================================================== */
+.review {
+  padding-top: 40px;
+  padding-left: 35px;
+  position: relative; // for positioning the :before content
+  font-size: 14px;
+  border: none;
+  &:before {
+    content: '\201C';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 70px;
+    color: @gray-light;
+  }
+  a {
+    font-size: 13px;
+  }
+  footer {
+    font-size: 100%;
+    font-family: @font-family-serif-alt;
+    cite {
+      font-style: italic;
+    }
+  }
+}
+
 /* --------------------------------------------------
 
   FONT-FACE
