@@ -1,0 +1,32 @@
+.post h4, .page h4{
+  margin-top: 25px;
+  color: #ed2024;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.post h3, .page h3{
+  color: #ed2024;
+  font-size: 22px;
+  font-family: DidotHeadlineDemi;
+  font-weight: normal;
+  font-style: normal;
+}
+.page img{
+  display: block;
+}
+.alignleft{
+  float: left;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.alignright{
+  float: right;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.wrapper-video{
+  margin-bottom: 20px;
+}

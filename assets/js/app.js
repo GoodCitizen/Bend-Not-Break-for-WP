@@ -1,5 +1,10 @@
 $( 'iframe' ).wrap( '<div class="wrapper wrapper-video"></div>' );
 
+$('#content-tabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+
 (function ($) {
   // Mobile nav toggle
   $('.nav-toggle').click(function() {
@@ -34,3 +39,5 @@ $( 'iframe' ).wrap( '<div class="wrapper wrapper-video"></div>' );
     return false;
   });
 }(jQuery));
+
+

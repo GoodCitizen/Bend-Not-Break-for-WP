@@ -69,9 +69,6 @@
                 endif;
               ?>
             </nav> <!-- /.nav nav-contact -->
-            <p class="learn-geomagic">
-              <a href="http://www.geomagic.com">Learn more about<br><img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-geomagic-logo.png" alt="Learn more about Geomagic"></a>
-            </p> <!-- /.learn-geomagic -->
             <?php if (roots_display_sidebar()) : ?>
             <div class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
               <?php include roots_sidebar_path(); ?>
