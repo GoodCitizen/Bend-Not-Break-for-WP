@@ -51,6 +51,7 @@ a {
   color: #000;
   &:hover {
     text-decoration: none;
+    color: @brand-red;
   }
 }
 
@@ -116,15 +117,12 @@ a {
 
 .title {
   font-family: @font-family-serif;
-  a{
+  a {
+    font-weight: normal;
     text-decoration: none;
-    &:hover{
-      color: #000;
-    }
-    &:focus{
-      color: #000;
-    }
-    &:active{
+    &:hover,
+    &:focus,
+    &:active {
       color: #000;
     }
   }
@@ -146,7 +144,7 @@ a {
       text-align: left;
     }
   }
-  &.title-reviews{
+  &.title-reviews {
     font-size: 18px;
     color: @brand-red;
     @media (min-width: @screen-sm-min) {
@@ -163,19 +161,6 @@ img.pull-left { margin-right: 20px; }
 
 /* Primary Layout
 ================================================== */
-.home{
-  .title-page{
-    display: none;
-  }
-  .content-sidebar{
-    .book-burst {
-      display: none;
-    }
-  }
-  .content-main {
-    background: #fff;
-  }
-}
 .content {
   margin-top: 65px;
   margin-bottom: 65px;
@@ -247,11 +232,15 @@ img.pull-left { margin-right: 20px; }
     letter-spacing: 0.1em;
     color: @brand-red;
   }
+  .menu-learn-more-about-3d-systems {
+    margin-top: 50px;
+  }
 }
-.nav>li{
+
+.nav > li {
   display: inline-block;
-  &>{
-    a{
+  & > {
+    a {
       text-decoration: none;
     }
   }
@@ -259,7 +248,11 @@ img.pull-left { margin-right: 20px; }
 
 .content-main {
   padding: 50px;
+  min-height: 1000px;
   background: #fff url(../img/bg-content-main.jpg) no-repeat;
+  @media (min-width: @screen-sm-min) {
+    padding: 50px;
+  }
 }
 
 .mobile-nav {
@@ -312,6 +305,7 @@ img.pull-left { margin-right: 20px; }
 
 
 
+
 /* --------------------------------------------------
 
   PAGE STYLES
@@ -320,53 +314,22 @@ img.pull-left { margin-right: 20px; }
 
 /* Home
 ================================================== */
-.page-index {
+.home {
+  .title-primary,
+  .title-page {
+    display: none;
+  }
   .book-burst {
     display: none;
   }
   .content-main {
     background: #fff;
   }
-}
-
-.book-cover-home {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-/* Reviews
-================================================== */
-.review {
-  font-size: 14px;
-  a {
-    font-size: 13px;
-  }
-  footer {
-    font-size: 100%;
-    font-family: @font-family-serif-alt;
-    cite {
-      font-style: italic;
-    }
+  .aligncenter.wp-image-11 {
+    margin: 0 auto 50px;
   }
 }
 
-/* --------------------------------------------------
-
-  JS Plugins
-
--------------------------------------------------- */
-.transition{
-  -webkit-transition: top 0.9s ease;
-  -moz-transition: top 0.9s ease;
-  -o-transition: top 0.9s ease;
-  transition: top 0.9s ease;
-}
-.down{
-  top: -50px;
-}
-.up{
-  top: 0;
-}
 
 /* Reviews
 ================================================== */
@@ -396,6 +359,66 @@ img.pull-left { margin-right: 20px; }
   }
 }
 
+
+/* Excerpts
+================================================== */
+#table-of-contents {
+  td {
+    padding: 5px 0;
+    width: 50%;
+  }
+  tr:nth-child(even) {
+    font-weight: bold;
+  }
+}
+
+
+/* Hotfixes
+================================================== */
+.post h4,
+.page h4 {
+  margin-top: 25px;
+  color: #ed2024;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.post h3,
+.page h3 {
+  color: #ed2024;
+  font-size: 22px;
+  font-family: DidotHeadlineDemi;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page img {
+  display: block;
+}
+
+.alignleft {
+  float: left;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.alignright {
+  float: right;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wrapper-video {
+  margin-bottom: 20px;
+}
+
+
+
+
+
 /* --------------------------------------------------
 
   FONT-FACE
@@ -422,4 +445,4 @@ img.pull-left { margin-right: 20px; }
  * © 2012 Bitstream Inc
 */
 
- @font-face {font-family: 'DidotHeadlineDemi';src: url('../fonts/didot-headline-demi/24265E_0_0.eot');src: url('../fonts/didot-headline-demi/24265E_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/didot-headline-demi/24265E_0_0.woff') format('woff'),url('../fonts/didot-headline-demi/24265E_0_0.ttf') format('truetype');}
+ @font-face { font-family: 'DidotHeadlineDemi';src: url('../fonts/didot-headline-demi/24265E_0_0.eot');src: url('../fonts/didot-headline-demi/24265E_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/didot-headline-demi/24265E_0_0.woff') format('woff'),url('../fonts/didot-headline-demi/24265E_0_0.ttf') format('truetype');}
