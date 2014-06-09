@@ -1,11 +1,12 @@
-$( 'iframe' ).wrap( '<div class="wrapper wrapper-video"></div>' );
-
-$('#content-tabs a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-});
+$('iframe').wrap( '<div class="wrapper wrapper-video"></div>' );
 
 (function ($) {
+
+  $('#content-tabs a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+  });
+
   // Mobile nav toggle
   $('.nav-toggle').click(function() {
     var navToggleText = $('.nav-wrapper').is(':visible') ? 'menu' : 'close menu';
@@ -16,9 +17,9 @@ $('#content-tabs a').click(function (e) {
   });
 
   $("#more-less-options-button").click(function() {
-       var txt = $("#extra-options").is(':visible') ? 'more options' : 'less options';
-       $("#more-less-options-button").text(txt);
-       $("#extra-options").slideToggle();
+    var txt = $("#extra-options").is(':visible') ? 'more options' : 'less options';
+    $("#more-less-options-button").text(txt);
+    $("#extra-options").slideToggle();
   });
 
   // Mobile nav accordion
