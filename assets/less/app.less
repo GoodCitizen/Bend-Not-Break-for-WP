@@ -162,9 +162,13 @@ img.pull-left { margin-right: 20px; }
 /* Primary Layout
 ================================================== */
 .content {
-  margin-top: 65px;
-  margin-bottom: 65px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background: #000; /* just in case content-sidebar is shorter than content-main, background will stay black */
+  @media (min-width: @screen-sm-min) {
+    margin-top: 65px;
+    margin-bottom: 65px;
+  }
 }
 
 .bordered-wrapper {
@@ -247,7 +251,7 @@ img.pull-left { margin-right: 20px; }
 }
 
 .content-main {
-  padding: 50px;
+  padding: 20px;
   min-height: 1000px;
   background: #fff url(../img/bg-content-main.jpg) no-repeat;
   @media (min-width: @screen-sm-min) {
