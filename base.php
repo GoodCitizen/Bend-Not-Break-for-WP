@@ -32,7 +32,7 @@
                   ?>
                 </nav> <!-- /.nav nav-author -->
                 <nav class="nav nav-contact">
-                  <h3 class="nav-title">Contact</h3>
+                  <h3 class="nav-title">The Contacts</h3>
                   <?php
                     if (has_nav_menu('contact_navigation')) :
                       wp_nav_menu(array('theme_location' => 'contact_navigation', 'menu_class' => 'nav-list'));
@@ -62,7 +62,7 @@
               ?>
             </nav> <!-- /.nav nav-author -->
             <nav class="nav nav-contact">
-              <h3 class="nav-title">Contact</h3>
+              <h3 class="nav-title">The Contacts</h3>
               <?php
                 if (has_nav_menu('contact_navigation')) :
                   wp_nav_menu(array('theme_location' => 'contact_navigation', 'menu_class' => ''));
