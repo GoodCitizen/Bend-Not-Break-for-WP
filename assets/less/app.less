@@ -265,7 +265,8 @@ img.pull-left { margin-right: 20px; }
   .nav-toggle {
     margin-left: -12px;
     margin-right: -12px;
-    padding: 15px 0;
+    padding: 9px 0 21px;
+    position: relative; // for positioning :before psuedo element
     display: block;
     text-align: center;
     text-transform: uppercase;
@@ -273,6 +274,17 @@ img.pull-left { margin-right: 20px; }
     background: @brand-red;
     &:hover {
       color: #fff;
+    }
+    &:before {
+      content: '';
+      margin: 0 auto;
+      width: 276px;
+      height: 12px;
+      display: block;
+      position: absolute;
+      top: -12px;
+      left: 12px;
+      background: @brand-red;
     }
   }
   .nav-wrapper {
