@@ -341,8 +341,27 @@ img.pull-left { margin-right: 20px; }
   .content-main {
     background: #fff;
   }
-  .aligncenter.wp-image-11 {
+  .hasFlash {
+    position: relative;
+  }
+  .home-book-burst-with-swf {
+    position: absolute;
+    top: 120px;
+    right: 150px;
+    z-index: 100;
+  }
+  .home-book-img {
     margin: 0 auto 50px;
+  }
+  .no-touch & {
+    .hasFlash {
+      display: none;
+    }
+  }
+  .touch & {
+    .home-book-burst {
+      display: none;
+    }
   }
 }
 
