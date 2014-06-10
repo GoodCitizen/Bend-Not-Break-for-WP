@@ -379,7 +379,7 @@ img.pull-left { margin-right: 20px; }
 /* Excerpts
 ================================================== */
 #contents-tabs {
-  .nav {
+  &.nav {
     li {
       padding: 5px 0 0;
     }
@@ -391,13 +391,11 @@ img.pull-left { margin-right: 20px; }
         border-radius: 0;
       }
     }
-    > li.active {
-      > a,
-      > a:hover,
-      > a:focus {
-        color: #000;
-        background-color: transparent;
-      }
+    > li.active > a,
+    > li.active > a:hover,
+    > li.active > a:focus {
+      color: #000;
+      background: none;
     }
   }
 }
