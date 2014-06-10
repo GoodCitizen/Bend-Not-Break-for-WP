@@ -378,6 +378,30 @@ img.pull-left { margin-right: 20px; }
 
 /* Excerpts
 ================================================== */
+#contents-tabs {
+  .nav {
+    li {
+      padding: 5px 0 0;
+    }
+  }
+  .nav-tabs {
+    > li {
+      > a {
+        color: #555;
+        border-radius: 0;
+      }
+    }
+    > li.active {
+      > a,
+      > a:hover,
+      > a:focus {
+        color: #000;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
 #table-of-contents {
   td {
     padding: 5px 0;
