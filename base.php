@@ -44,7 +44,6 @@
           </div> <!-- /.row visible-xs -->
         <div class="row">
           <aside class="content-sidebar col-sm-3 hidden-xs">
-            <a class="book-burst" href="#"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/img-book-burst.png" alt="Purchase Now!"></a> <!-- /.book-burst -->
             <nav class="nav nav-book">
               <?php if(is_front_page()): ?>
                   <?php else: ?>
