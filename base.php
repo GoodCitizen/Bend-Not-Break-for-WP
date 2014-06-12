@@ -46,6 +46,12 @@
           <aside class="content-sidebar col-sm-3 hidden-xs">
             <a class="book-burst" href="#"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/img-book-burst.png" alt="Purchase Now!"></a> <!-- /.book-burst -->
             <nav class="nav nav-book">
+              <?php if(is_front_page()): ?>
+                  <?php else: ?>
+                  <ul>
+                    <li><a href="<?php echo home_url('/') ?>" title="home">Home</a></li>
+                  </ul>
+                  <?php endif; ?>
               <h3 class="nav-title">The Book</h3>
               <?php
                 if (has_nav_menu('book_navigation')) :
