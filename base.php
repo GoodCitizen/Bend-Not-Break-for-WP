@@ -45,12 +45,6 @@
         <div class="row">
           <aside class="content-sidebar col-sm-3 hidden-xs">
             <nav class="nav nav-book">
-              <?php if(is_front_page()): ?>
-                  <?php else: ?>
-                  <ul>
-                    <li><a href="<?php echo home_url('/') ?>" title="home">Home</a></li>
-                  </ul>
-                  <?php endif; ?>
               <h3 class="nav-title">The Book</h3>
               <?php
                 if (has_nav_menu('book_navigation')) :
